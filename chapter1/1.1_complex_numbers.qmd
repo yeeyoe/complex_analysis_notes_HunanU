@@ -16,7 +16,7 @@ $$(a,b)\cdot(c,d)=(ac-bd,ad+bc).$$  {#eq-complex-mul}
 :::
 
 ::: {.proof}
-回忆域的定义，验证上述运算满足所有域的性质。留作习题。
+回忆 域 的定义，验证上述运算满足所有域的性质。留作习题。
 :::
 
 ::: {.corollary #cor-complex-field}
