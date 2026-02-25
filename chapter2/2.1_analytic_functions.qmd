@@ -1,0 +1,8 @@
+## 解析函数
+
+这里是解析函数的内容。回忆(@thm-complex-field)和 @cor-complex-field。
+
+::: {.definition #def-holo-function}
+一个函数 $f$ 是holomorphic的，如果它在其域上是可微的。
+:::
+注意这里的差商是关于复数的除法(@eq-complex-mul)。

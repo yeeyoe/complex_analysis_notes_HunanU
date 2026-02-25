@@ -1,0 +1,6 @@
+quarto render --to pdf
+quarto render --to html
+
+quarto render chapter1/Chap1_index.qmd
+
+quarto render chapter1/Chap1_index.qmd --profile slides --to revealjs

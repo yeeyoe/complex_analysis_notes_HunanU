@@ -1,0 +1,36 @@
+{
+  "index.qmd": {
+    "index.html": "3e92cc72"
+  },
+  "chapter1/1.1_complex_numbers.qmd": {
+    "1.1_complex_numbers.html": "742eebf4"
+  },
+  "chapter1/1.2_geometry.qmd": {
+    "1.2_geometry.html": "90438f43"
+  },
+  "chapter1/1.3_exercises.qmd": {
+    "1.3_exercises.html": "567a0299"
+  },
+  "chapter2/2.1_analytic_functions.qmd": {
+    "2.1_analytic_functions.html": "ae608fdd"
+  },
+  "chapter2/2.2_cauchy_riemann.qmd": {
+    "2.2_cauchy_riemann.html": "9f8fb27e"
+  },
+  "chapter2/2.3_exercises.qmd": {
+    "2.3_exercises.html": "beb973f3"
+  },
+  "chapter1/index.qmd": {
+    "index.html": "85f7a7f1"
+  },
+  "chapter2/index.qmd": {
+    "index.html": "d2253422"
+  },
+  "chapter1/Chap1_index.qmd": {
+    "Chap1_index.html": "273bf534",
+    "Chap1_index.tex": "220ca1b8"
+  },
+  "chapter2/Chap2_index.qmd": {
+    "Chap2_index.html": "a685d005"
+  }
+}

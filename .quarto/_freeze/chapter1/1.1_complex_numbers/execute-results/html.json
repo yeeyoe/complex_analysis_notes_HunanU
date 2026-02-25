@@ -1,0 +1,12 @@
+{
+  "hash": "ca7de57ac1c94d98e369f306e8412e75",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"1.1 复数的定义\"\njupyter: python3\nexecute:\n  echo: true\n  warning: false\n---\n\n复数的引入是为了推广实数域到复域，以便于描述和研究一些在实数域上不存在的量，例如根为负数的二次方程的解。\n\n::: {#def-complex-field}\n\n**定义 1.1（复数域）**  \n复数域 $\\mathbb{C}$ 定义为有序实数对 $(a,b)$ 的集合，配备加法  \n$$(a,b)+(c,d)=(a+c,b+d)$$  \n与乘法  \n$$(a,b)\\cdot(c,d)=(ac-bd,ad+bc).$$  \n在此运算下，$\\mathbb{C}$ 构成一个域，其零元为 $(0,0)$，单位元为 $(1,0)$，并满足交换律、结合律及分配律。\n\n:::\n\nFor a demonstration of a line plot on a polar axis, see @fig-polar.\n\n::: {#cell-fig-polar .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![A line plot on a polar axis](1.1_complex_numbers_files/figure-html/fig-polar-output-1.png){#fig-polar width=450 height=439}\n:::\n:::\n\n\n",
+    "supporting": [
+      "1.1_complex_numbers_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
