@@ -157,7 +157,6 @@
 \usepackage{xeCJK}
 \newcommand{\bb}[1]{\left( #1 \right)}
 \newcommand{\res}[2]{\mathrm{Res}_{#1}\left( #2 \right)}
-
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -197,15 +196,15 @@
 \newcommand*\listoflistings{\listof{codelisting}{列表索引}}
 \usepackage{amsthm}
 \theoremstyle{definition}
-\newtheorem{definition}{定义}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{练习}[chapter]
-\theoremstyle{definition}
 \newtheorem{example}{例}[chapter]
 \theoremstyle{plain}
 \newtheorem{corollary}{推论}[chapter]
 \theoremstyle{plain}
 \newtheorem{theorem}{定理}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{定义}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{练习}[chapter]
 \theoremstyle{remark}
 \AtBeginDocument{\renewcommand*{\proofname}{证明}}
 \newtheorem*{remark}{注记}
@@ -316,7 +315,7 @@
 
 \end{exercise}
 
-\(\res{a}{f(z)}\) For a demonstration of a line plot on a polar axis,
+\[\res{a}{f(z)}\] For a demonstration of a line plot on a polar axis,
 see 图~\ref{fig-polar}.
 
 \begin{Shaded}
