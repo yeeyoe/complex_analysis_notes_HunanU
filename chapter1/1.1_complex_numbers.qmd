@@ -33,7 +33,7 @@ $$(a,b)\cdot(c,d)=(ac-bd,ad+bc).$$  {#eq-complex-mul}
 验证 $(2+3i)^{-1}=2-3i$。
 ::: 
 
-
+$$\res{a}{f(z)}$$
 For a demonstration of a line plot on a polar axis, see @fig-polar.
 ```{python}
 #| label: fig-polar

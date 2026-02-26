@@ -38,3 +38,5 @@ pip-log.txt
 .vscode/
 *.swp
 *.swo
+
+**/*.quarto_ipynb

@@ -14,7 +14,7 @@
     "href": "chapter1/Chap1_index.html",
     "title": "1  复数",
     "section": "",
-    "text": "1.1 复数的定义\n这一章我们主要介绍复数的概念、复数域、复数的几何意义、复数的运算法则等。\n复数的引入是为了推广实数域到复域，以便于描述和研究一些在实数域上不存在的量，例如根为负数的二次方程的解。\n上述 定义 1.1 是标准的。\nFor a demonstration of a line plot on a polar axis, see 图 1.1.\n代码\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\n图 1.1: A line plot on a polar axis",
+    "text": "1.1 复数的定义\n这一章我们主要介绍复数的概念、复数域、复数的几何意义、复数的运算法则等。\n复数的引入是为了推广实数域到复域，以便于描述和研究一些在实数域上不存在的量，例如根为负数的二次方程的解。\n上述 定义 1.1 是标准的。\n\\(\\res{a}{f(z)}\\) For a demonstration of a line plot on a polar axis, see 图 1.1.\n代码\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\n图 1.1: A line plot on a polar axis",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>复数</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "chapter1/Chap1_index.html#复数的定义",
     "title": "1  复数",
     "section": "",
-    "text": "定义 1.1 （复数域）\n复数域 \\(\\mathbb{C}\\) 定义为有序实数对 \\((a,b)\\) 的集合，配备加法\n\\[(a,b)+(c,d)=(a+c,b+d) \\tag{1.1}\\] 与乘法\n\\[(a,b)\\cdot(c,d)=(ac-bd,ad+bc). \\tag{1.2}\\]\n\n\n\n定理 1.1 在运算(1.1)和(1.2)下，\\(\\mathbb{C}\\) 构成一个域，其零元为 \\((0,0)\\)，单位元为 \\((1,0)\\)，并满足交换律、结合律及分配律。\n\n\n证明. 回忆域的定义，验证上述运算满足所有域的性质。留作习题。\n\n\n推论 1.1 复数域 \\(\\mathbb{C}\\) 中非零元素均可逆。\n\n\n例 1.1 由(1.2),计算 \\((2+3i)(-1-4i)=(2-3i)(-1+4i)=-10+13i\\)。\n\n\n例 1.2 由 推论 1.1,计算复数的逆元 \\((2+3i)^{-1}=2-3i\\)。\n\n\n练习 1.1 验证 \\((2+3i)^{-1}=2-3i\\)。",
+    "text": "定义 1.1 （复数域）\n复数域 \\(\\mathbb{C}\\) 定义为有序实数对 \\((a,b)\\) 的集合，配备加法\n\\[(a,b)+(c,d)=(a+c,b+d) \\tag{1.1}\\] 与乘法\n\\[(a,b)\\cdot(c,d)=(ac-bd,ad+bc). \\tag{1.2}\\]\n\n\n\n定理 1.1 在运算(1.1)和(1.2)下，\\(\\mathbb{C}\\) 构成一个域，其零元为 \\((0,0)\\)，单位元为 \\((1,0)\\)，并满足交换律、结合律及分配律。\n\n\n证明. 回忆 域 的定义，验证上述运算满足所有域的性质。留作习题。\n\n\n推论 1.1 复数域 \\(\\mathbb{C}\\) 中非零元素均可逆。\n\n\n例 1.1 由(1.2),计算 \\((2+3i)(-1-4i)=(2-3i)(-1+4i)=-10+13i\\)。\n\n\n例 1.2 由 推论 1.1,计算复数的逆元 \\((2+3i)^{-1}=2-3i\\)。\n\n\n练习 1.1 验证 \\((2+3i)^{-1}=2-3i\\)。",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>复数</span>"
     ]
