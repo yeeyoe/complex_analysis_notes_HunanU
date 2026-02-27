@@ -23,6 +23,7 @@ format:
   pdf:
     documentclass: ctexbook
     pdf-engine: xelatex
+    classoption: "fontset=fandol"
     keep-tex: true
     include-in-header:
       file: preamble.tex
