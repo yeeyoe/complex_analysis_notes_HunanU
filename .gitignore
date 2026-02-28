@@ -25,7 +25,9 @@ pip-log.txt
 *.fls
 *.fdb_latexmk
 *.xdv
+*.pdf
 湖南大学复变函数讲义.tex
+
 
 # macOS
 .DS_Store
