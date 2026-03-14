@@ -164,7 +164,7 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#解析函数" id="toc-解析函数" class="nav-link active" data-scroll-target="#解析函数"><span class="header-section-number">2.1</span> 解析函数</a></li>
+  <li><a href="#复可微和cauchyriemann条件" id="toc-复可微和cauchyriemann条件" class="nav-link active" data-scroll-target="#复可微和cauchyriemann条件"><span class="header-section-number">2.1</span> 复可微和Cauchy–Riemann条件</a></li>
   <li><a href="#柯西-黎曼方程" id="toc-柯西-黎曼方程" class="nav-link" data-scroll-target="#柯西-黎曼方程"><span class="header-section-number">2.2</span> 柯西-黎曼方程</a></li>
   <li><a href="#习题" id="toc-习题" class="nav-link" data-scroll-target="#习题"><span class="header-section-number">2.3</span> 习题</a></li>
   </ul>
@@ -172,6 +172,76 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+<div style="display:none">
+$$
+\global\long\def\cc{\mathbb{C}}%
+
+\global\long\def\rr{\mathbb{R}}%
+
+\global\long\def\bbq{\mathbb{Q}}%
+
+\global\long\def\bbz{\mathbb{Z}}%
+
+\global\long\def\bbn{\mathbb{N}}%
+
+\global\long\def\bbd{\mathbb{D}}%
+
+\global\long\def\cco{\mathcal{O}}%
+
+\global\long\def\Del{\varDelta}%
+
+\global\long\def\del{\delta}%
+
+\global\long\def\Ome{\Omega}%
+
+\global\long\def\lam{\lambda}%
+
+\global\long\def\eps{\varepsilon}%
+
+\global\long\def\vphi{\varphi}%
+
+
+\global\long\def\ii{\mathrm{i}\,}%
+
+\global\long\def\oo#1{\mathrm{o}\left(#1\right)}%
+
+\global\long\def\half{\frac{1}{2}}%
+
+\global\long\def\ra{\rightarrow}%
+
+\global\long\def\Ra{\longrightarrow}%
+
+\global\long\def\era{\mapsto}%
+
+\global\long\def\Era{\longmapsto}%
+
+\global\long\def\deff{\coloneqq}%
+
+\global\long\def\fed{\eqqcolon}%
+
+\global\long\def\sub{\subset}%
+
+\global\long\def\con{\supset}%
+
+\global\long\def\re{\mathrm{Re}}%
+
+\global\long\def\im{\mathrm{Im}}%
+
+\global\long\def\dis#1{D\left(#1\right)}%
+
+\global\long\def\bb#1{\left(#1\right)}%
+
+\global\long\def\abs#1{\left|#1\right|}%
+
+\global\long\def\Bar#1{\overline{#1}}%
+
+\global\long\def\pp#1#2{\frac{\partial#1}{\partial#2}}%
+
+\global\long\def\ppb#1#2{\frac{\partial#1}{\partial\bar{#2}}}%
+
+\global\long\def\dd#1#2{\frac{\mathrm{d}#1}{\mathrm{d}#2}}%
+$$
+</div>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -192,13 +262,12 @@ window.Quarto = {
 </header>
 
 
-<section id="解析函数" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="解析函数"><span class="header-section-number">2.1</span> 解析函数</h2>
-<p>这里是解析函数的内容。回忆(<a href="../chapter1/Chap1_index.html#thm-complex-field" class="quarto-xref">定理&nbsp;<span>1.1</span></a>)和 <a href="../chapter1/Chap1_index.html#cor-complex-field" class="quarto-xref">推论&nbsp;<span>1.1</span></a>。</p>
-<div id="def-holo-function" class="definition theorem">
-<p><span class="theorem-title"><strong>定义 2.1</strong></span> 一个函数 <span class="math inline">\(f\)</span> 是holomorphic的，如果它在其域上是可微的。</p>
-</div>
-<p>注意这里的差商是关于复数的除法(<a href="../chapter1/Chap1_index.html#eq-complex-mul" class="quarto-xref"><span>1.2</span></a>)。</p>
+<section id="复可微和cauchyriemann条件" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="复可微和cauchyriemann条件"><span class="header-section-number">2.1</span> 复可微和Cauchy–Riemann条件</h2>
+<p>（1） 我们称<span class="math inline">\(f:\dis{z_{0},r}\ra\cc\)</span>在<span class="math inline">\(z_{0}\)</span>处复可微（或复可导），若以下极限存在： <span class="math display">\[
+f^{\prime}\bb{z_{0}}\deff\lim_{\del z\ra0}\frac{f\bb{z_{0}+\Del z}-f\bb{z_{0}}}{\Del z}.
+\]</span> <span class="math inline">\(f^{\prime}\bb{z_{0}}\)</span> 称为 <span class="math inline">\(f\)</span> 在 <span class="math inline">\(z_{0}\)</span> 处的导数。</p>
+<p>（2） 设<span class="math inline">\(\Ome\sub\cc\)</span>为开集，若函数<span class="math inline">\(f:\Ome\ra\cc\)</span> 在<span class="math inline">\(\Ome\)</span>中每一点处皆为复可微，则称<span class="math inline">\(f\)</span>在<span class="math inline">\(\Ome\)</span>上全纯（也称解析）。<span class="math inline">\(\Ome\)</span> 上所有全纯函数构成的集合记为 <span class="math inline">\(\cco\left(\Ome\right)\)</span>。称<span class="math inline">\(f\)</span>在一点 <span class="math inline">\(a\)</span> 处全纯，如果 <span class="math inline">\(f\)</span> 在<span class="math inline">\(a\)</span>的某个邻域上全纯。这样的函数全体记为 <span class="math inline">\(\cco_{a}\)</span>。</p>
 </section>
 <section id="柯西-黎曼方程" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="柯西-黎曼方程"><span class="header-section-number">2.2</span> 柯西-黎曼方程</h2>

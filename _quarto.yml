@@ -20,13 +20,13 @@ format:
     toc: true
     code-fold: true
     html-math-method: mathjax
+    include-before-body: mathjax-macros.html 
   pdf:
     documentclass: ctexbook
     pdf-engine: xelatex
     classoption: "fontset=fandol"
     keep-tex: true
-    include-in-header:
-      file: preamble.tex
+    include-in-header: preamble.tex 
 
 crossref:
   chapters: true

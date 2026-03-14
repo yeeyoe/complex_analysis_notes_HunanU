@@ -165,14 +165,84 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#复数的定义" id="toc-复数的定义" class="nav-link active" data-scroll-target="#复数的定义"><span class="header-section-number">1.1</span> 复数的定义</a></li>
-  <li><a href="#复球面" id="toc-复球面" class="nav-link" data-scroll-target="#复球面"><span class="header-section-number">1.2</span> 复球面</a></li>
+  <li><a href="#复数" id="toc-复数" class="nav-link active" data-scroll-target="#复数"><span class="header-section-number">1.1</span> 复数</a></li>
+  <li><a href="#复平面的拓扑" id="toc-复平面的拓扑" class="nav-link" data-scroll-target="#复平面的拓扑"><span class="header-section-number">1.2</span> 复平面的拓扑</a></li>
   <li><a href="#习题" id="toc-习题" class="nav-link" data-scroll-target="#习题"><span class="header-section-number">1.3</span> 习题</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+<div style="display:none">
+$$
+\global\long\def\cc{\mathbb{C}}%
+
+\global\long\def\rr{\mathbb{R}}%
+
+\global\long\def\bbq{\mathbb{Q}}%
+
+\global\long\def\bbz{\mathbb{Z}}%
+
+\global\long\def\bbn{\mathbb{N}}%
+
+\global\long\def\bbd{\mathbb{D}}%
+
+\global\long\def\cco{\mathcal{O}}%
+
+\global\long\def\Del{\varDelta}%
+
+\global\long\def\del{\delta}%
+
+\global\long\def\Ome{\Omega}%
+
+\global\long\def\lam{\lambda}%
+
+\global\long\def\eps{\varepsilon}%
+
+\global\long\def\vphi{\varphi}%
+
+
+\global\long\def\ii{\mathrm{i}\,}%
+
+\global\long\def\oo#1{\mathrm{o}\left(#1\right)}%
+
+\global\long\def\half{\frac{1}{2}}%
+
+\global\long\def\ra{\rightarrow}%
+
+\global\long\def\Ra{\longrightarrow}%
+
+\global\long\def\era{\mapsto}%
+
+\global\long\def\Era{\longmapsto}%
+
+\global\long\def\deff{\coloneqq}%
+
+\global\long\def\fed{\eqqcolon}%
+
+\global\long\def\sub{\subset}%
+
+\global\long\def\con{\supset}%
+
+\global\long\def\re{\mathrm{Re}}%
+
+\global\long\def\im{\mathrm{Im}}%
+
+\global\long\def\dis#1{D\left(#1\right)}%
+
+\global\long\def\bb#1{\left(#1\right)}%
+
+\global\long\def\abs#1{\left|#1\right|}%
+
+\global\long\def\Bar#1{\overline{#1}}%
+
+\global\long\def\pp#1#2{\frac{\partial#1}{\partial#2}}%
+
+\global\long\def\ppb#1#2{\frac{\partial#1}{\partial\bar{#2}}}%
+
+\global\long\def\dd#1#2{\frac{\mathrm{d}#1}{\mathrm{d}#2}}%
+$$
+</div>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -193,22 +263,13 @@ window.Quarto = {
 </header>
 
 
-<div class="hidden">
-<p>$$ \global%</p>
-<p>\global%</p>
-<p>\global%</p>
-<p>\global%</p>
-<p>\global%</p>
-<p>\global%</p>
-<p>\global% $$</p>
-</div>
 <p>这一章我们主要介绍复数的概念、复数域、复数的几何意义、复数的运算法则等。</p>
-<section id="复数的定义" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="复数的定义"><span class="header-section-number">1.1</span> 复数的定义</h2>
-<p>复数的引入是为了推广实数域到复域，以便于描述和研究一些在实数域上不存在的量，例如根为负数的二次方程的解。</p>
+<section id="复数" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="复数"><span class="header-section-number">1.1</span> 复数</h2>
+<p>这里是quarto的各种环境的演示：</p>
 <div id="def-complex-field" class="definition theorem">
 <p><span class="theorem-title"><strong>定义 1.1</strong></span> <strong>（复数域）</strong><br>
-复数域 <span class="math inline">\(\mathbb{C}\)</span> 定义为有序实数对 <span class="math inline">\((a,b)\)</span> 的集合，配备加法<br>
+复数域 <span class="math inline">\(\cc\)</span> 定义为有序实数对 <span class="math inline">\((a,b)\)</span> 的集合，配备加法<br>
 <span id="eq-complex-add"><span class="math display">\[(a,b)+(c,d)=(a+c,b+d) \tag{1.1}\]</span></span> 与乘法<br>
 <span id="eq-complex-mul"><span class="math display">\[(a,b)\cdot(c,d)=(ac-bd,ad+bc). \tag{1.2}\]</span></span></p>
 </div>
@@ -231,33 +292,26 @@ window.Quarto = {
 <div id="exr-complex-field-2" class="exr theorem exercise">
 <p><span class="theorem-title"><strong>练习 1.1</strong></span> 验证 <span class="math inline">\((2+3i)^{-1}=2-3i\)</span>。</p>
 </div>
-<div class="hidden">
-<p>$$ \global%</p>
-<p>\global%</p>
-<p>\global%</p>
-<p>\global%</p>
-<p>\global%</p>
-<p>\global%</p>
-<p>\global% $$</p>
-</div>
 </section>
-<section id="复球面" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="复球面"><span class="header-section-number">1.2</span> 复球面</h2>
+<section id="复平面的拓扑" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="复平面的拓扑"><span class="header-section-number">1.2</span> 复平面的拓扑</h2>
 <p>Mobius变换在一点处无定义，我们可以扩大复数域来补充定义。</p>
-<p>定义 <span class="math inline">\(\hat{\mathbb{C}}\coloneqq\mathbb{C}\cup\left\{ \infty\right\}\)</span>， 其中<span class="math inline">\(\infty\)</span>是一个假想的无穷远点。</p>
-<p>Cayley 变换 <span class="math inline">\(\chi(z)=\frac{z-\mathrm{i}}{z+\mathrm{i}}\)</span> 可以补充定义 <span class="math display">\[
-\chi(-\mathrm{i})=\infty,\ \chi(\infty)=1
-\]</span> 后成为 <span class="math inline">\(\hat{\mathbb{C}}\)</span> 到自身的双射。</p>
+<p>定义 <span class="math inline">\(\hat{\cc}\deff\cc\cup\left\{ \infty\right\}\)</span>， 其中<span class="math inline">\(\infty\)</span>是一个假想的无穷远点。</p>
+<p>Cayley 变换 <span class="math inline">\(\chi(z)=\frac{z-\ii}{z+\ii}\)</span> 可以补充定义 <span class="math display">\[
+\chi(-\ii)=\infty,\ \chi(\infty)=1
+\]</span> 后成为 <span class="math inline">\(\hat{\cc}\)</span> 到自身的双射。</p>
 <p>黎曼发现可以用二维球面 <span class="math display">\[
-S^{2}=\left\{ \left(x,y,z\right)\in\mathbb{R}^{3}\mid x^{2}+y^{2}+z^{2}=1\right\}
-\]</span> 作为<span class="math inline">\(\hat{\mathbb{C}}\)</span>的几何模型。</p>
+S^{2}=\left\{ \left(x,y,z\right)\in\rr^{3}\mid x^{2}+y^{2}+z^{2}=1\right\}
+\]</span><br>
+作为<span class="math inline">\(\hat{\cc}\)</span>的几何模型。</p>
 <p>&lt;展示课件：球极投影&gt;</p>
 <p>还有一种几何模型：复射影直线 <span class="math display">\[
-\mathbb{P}^{1}=\left\{ \mathbb{C}^{2}\text{中过原点的直线}\right\} =\left(\mathbb{C}^{2}\backslash\left(0,0\right)\right)/\sim
-\]</span> 其中等价关系<span class="math inline">\(\text{～}\)</span>为向量相差一个数乘。用<span class="math inline">\([z:w]\)</span>表示向量<span class="math inline">\(\left(z,w\right)\)</span>生成的直线，那么有 <span class="math display">\[
-[z:w]=[\lambda z:\lambda w],\ \forall\lambda\in\mathbb{C}^{*}.
-\]</span> 若<span class="math inline">\(w\neq0\)</span>，有<span class="math inline">\([z:w]=\left[z/w:1\right]\)</span>; 当<span class="math inline">\(w=0\)</span>，则<span class="math inline">\([z:0]=[1:0]\)</span>。于是我们有双射 <span class="math display">\[
-\mathbb{P}^{1}=\left\{ [z:1]\mid z\in\mathbb{C}\right\} \cup\left\{ [1:0]\right\} \stackrel{\mathrm{1-1}}{\longrightarrow}\mathbb{C}\cup\left\{ \infty\right\} =\hat{\mathbb{C}}.
+\mathbb{P}^{1}=\left\{ \cc^{2}\text{中过原点的直线}\right\} =\left(\cc^{2}\backslash\left(0,0\right)\right)/\sim
+\]</span><br>
+其中等价关系<span class="math inline">\(\text{～}\)</span>为向量相差一个数乘。用<span class="math inline">\([z:w]\)</span>表示向量<span class="math inline">\(\left(z,w\right)\)</span>生成的直线，那么有 <span class="math display">\[
+[z:w]=[\lambda z:\lambda w],\ \forall\lambda\in\cc^{*}.
+\]</span> 若<span class="math inline">\(w\neq0\)</span>，有<span class="math inline">\([z:w]=\left[z/w:1\right]\)</span>; 当<span class="math inline">\(w=0\)</span>，则<span class="math inline">\([z:0]=[1:0]\)</span>。于是我们有双射 <span class="math display">\[      
+\mathbb{P}^{1}=\left\{ [z:1]\mid z\in\cc\right\} \cup\left\{ [1:0]\right\} \stackrel{\mathrm{1-1}}{\longrightarrow}\cc\cup\left\{ \infty\right\} =\hat{\cc}.
 \]</span></p>
 <p>Mobius变换在<span class="math inline">\(\mathbb{P}^{1}\)</span>上表现为线性变换： <span class="math display">\[
 \left[\begin{array}{c}
@@ -273,7 +327,7 @@ w
 az+bw\\
 cz+dw
 \end{array}\right].
-\]</span> 其对应到<span class="math inline">\(\hat{\mathbb{C}}\)</span>上的Mobius变换 <span class="math display">\[
+\]</span> 其对应到<span class="math inline">\(\hat{\cc}\)</span>上的Mobius变换 <span class="math display">\[
 z\mapsto\frac{az+b}{cz+d}.
 \]</span></p>
 </section>
