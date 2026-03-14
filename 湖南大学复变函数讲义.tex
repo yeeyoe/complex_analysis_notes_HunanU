@@ -115,8 +115,13 @@
 
 
 \usepackage{xeCJK}
-\newcommand{\bb}[1]{\left( #1 \right)}
-\newcommand{\res}[2]{\mathrm{Res}_{#1}\left( #2 \right)}
+\usepackage{verbatim}  % 原样输出
+% 数学核心（mathtools 自动加载 amsmath/amstext）
+\usepackage{mathtools}
+\usepackage{amssymb}   % 数学符号
+\usepackage{amsthm}    % 定理环境
+     
+
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -156,15 +161,15 @@
 \newcommand*\listoflistings{\listof{codelisting}{列表索引}}
 \usepackage{amsthm}
 \theoremstyle{definition}
-\newtheorem{example}{例}[chapter]
+\newtheorem{definition}{定义}[chapter]
 \theoremstyle{definition}
-\newtheorem{exercise}{练习}[chapter]
-\theoremstyle{plain}
-\newtheorem{corollary}{推论}[chapter]
+\newtheorem{example}{例}[chapter]
 \theoremstyle{plain}
 \newtheorem{theorem}{定理}[chapter]
+\theoremstyle{plain}
+\newtheorem{corollary}{推论}[chapter]
 \theoremstyle{definition}
-\newtheorem{definition}{定义}[chapter]
+\newtheorem{exercise}{练习}[chapter]
 \theoremstyle{remark}
 \AtBeginDocument{\renewcommand*{\proofname}{证明}}
 \newtheorem*{remark}{注记}
@@ -195,7 +200,7 @@
 
 \title{湖南大学复变函数讲义}
 \author{姚懿}
-\date{2026-03-01}
+\date{2026-03-14}
 \begin{document}
 \frontmatter
 \maketitle
@@ -220,6 +225,20 @@
 \bookmarksetup{startatroot}
 
 \chapter{复数}\label{ux590dux6570}
+
+\$\$ \textbackslash global\long\def\bbc{\mathbb{C}}\%
+
+\textbackslash global\long\def\bbr{\mathbb{R}}\%
+
+\textbackslash global\long\def\bbq{\mathbb{Q}}\%
+
+\textbackslash global\long\def\bbz{\mathbb{Z}}\%
+
+\textbackslash global\long\def\bbn{\mathbb{N}}\%
+
+\textbackslash global\long\def\bbd{\mathbb{D}}\%
+
+\textbackslash global\long\def\ii{\mathrm{i}}\% \$\$
 
 这一章我们主要介绍复数的概念、复数域、复数的几何意义、复数的运算法则等。
 
@@ -275,13 +294,66 @@
 
 \end{exercise}
 
-\[\res{a}{f(z)}\]
+\$\$ \textbackslash global\long\def\bbc{\mathbb{C}}\%
 
-\section{复数的几何意义}\label{ux590dux6570ux7684ux51e0ux4f55ux610fux4e49}
+\textbackslash global\long\def\bbr{\mathbb{R}}\%
 
-这里是几何意义的内容。
+\textbackslash global\long\def\bbq{\mathbb{Q}}\%
 
-回顾 定义~\ref{def-complex-field} 的定义。 @ref(def-complex-field)
+\textbackslash global\long\def\bbz{\mathbb{Z}}\%
+
+\textbackslash global\long\def\bbn{\mathbb{N}}\%
+
+\textbackslash global\long\def\bbd{\mathbb{D}}\%
+
+\textbackslash global\long\def\ii{\mathrm{i}}\% \$\$
+
+\section{复球面}\label{ux590dux7403ux9762}
+
+Mobius变换在一点处无定义，我们可以扩大复数域来补充定义。
+
+定义 \(\hat{\mathbb{C}}\coloneqq\mathbb{C}\cup\left\{ \infty\right\}\)，
+其中\(\infty\)是一个假想的无穷远点。
+
+Cayley 变换 \(\chi(z)=\frac{z-\mathrm{i}}{z+\mathrm{i}}\) 可以补充定义
+\[
+\chi(-\mathrm{i})=\infty,\ \chi(\infty)=1
+\] 后成为 \(\hat{\mathbb{C}}\) 到自身的双射。
+
+黎曼发现可以用二维球面 \[
+S^{2}=\left\{ \left(x,y,z\right)\in\mathbb{R}^{3}\mid x^{2}+y^{2}+z^{2}=1\right\} 
+\] 作为\(\hat{\mathbb{C}}\)的几何模型。
+
+\textless 展示课件：球极投影\textgreater{}
+
+还有一种几何模型：复射影直线 \[
+\mathbb{P}^{1}=\left\{ \mathbb{C}^{2}\text{中过原点的直线}\right\} =\left(\mathbb{C}^{2}\backslash\left(0,0\right)\right)/\sim
+\]
+其中等价关系\(\text{～}\)为向量相差一个数乘。用\([z:w]\)表示向量\(\left(z,w\right)\)生成的直线，那么有
+\[
+[z:w]=[\lambda z:\lambda w],\ \forall\lambda\in\mathbb{C}^{*}.
+\] 若\(w\neq0\)，有\([z:w]=\left[z/w:1\right]\);
+当\(w=0\)，则\([z:0]=[1:0]\)。于是我们有双射 \[
+\mathbb{P}^{1}=\left\{ [z:1]\mid z\in\mathbb{C}\right\} \cup\left\{ [1:0]\right\} \stackrel{\mathrm{1-1}}{\longrightarrow}\mathbb{C}\cup\left\{ \infty\right\} =\hat{\mathbb{C}}.
+\]
+
+Mobius变换在\(\mathbb{P}^{1}\)上表现为线性变换： \[
+\left[\begin{array}{c}
+z\\
+w
+\end{array}\right]\mapsto\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]\left[\begin{array}{c}
+z\\
+w
+\end{array}\right]=\left[\begin{array}{c}
+az+bw\\
+cz+dw
+\end{array}\right].
+\] 其对应到\(\hat{\mathbb{C}}\)上的Mobius变换 \[
+z\mapsto\frac{az+b}{cz+d}.
+\]
 
 \section{习题}\label{ux4e60ux9898}
 

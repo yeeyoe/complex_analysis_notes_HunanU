@@ -1,16 +1,55 @@
-## 复数的几何意义
+{{< include ../_macros.qmd >}}
+## 复球面 
 
-这里是几何意义的内容。
+Mobius变换在一点处无定义，我们可以扩大复数域来补充定义。
 
-回顾 @def-complex-field 的定义。 @ref(def-complex-field)
+定义 $\hat{\bbc}\coloneqq\bbc\cup\left\{ \infty\right\}$， 其中$\infty$是一个假想的无穷远点。
 
-::: {.content-visible when-format="html"}
-### 复数乘法演示
+Cayley 变换 $\chi(z)=\frac{z-\ii}{z+\ii}$ 可以补充定义
+$$
+\chi(-\ii)=\infty,\ \chi(\infty)=1
+$$
+后成为 $\hat{\bbc}$ 到自身的双射。
 
-下方演示了两个复数 $z_1$ 和 $z_2$ 的乘积 $z_3 = z_1 \cdot z_2$。你可以拖动蓝色点 ($z_1$) 和红色点 ($z_2$) 来观察乘积向量（绿色点 $z_3$）的变化。
+黎曼发现可以用二维球面
+$$
+S^{2}=\left\{ \left(x,y,z\right)\in\bbr^{3}\mid x^{2}+y^{2}+z^{2}=1\right\} 
+$$
+作为$\hat{\bbc}$的几何模型。
 
-请注意：
-1.  $|z_3| = |z_1| \cdot |z_2|$
-2.  $\arg(z_3) = \arg(z_1) + \arg(z_2)$
+<展示课件：球极投影>
 
-:::
+还有一种几何模型：复射影直线
+$$
+\mathbb{P}^{1}=\left\{ \bbc^{2}\text{中过原点的直线}\right\} =\left(\bbc^{2}\backslash\left(0,0\right)\right)/\sim
+$$
+其中等价关系$\text{～}$为向量相差一个数乘。用$[z:w]$表示向量$\left(z,w\right)$生成的直线，那么有
+$$
+[z:w]=[\lambda z:\lambda w],\ \forall\lambda\in\bbc^{*}.
+$$
+若$w\neq0$，有$[z:w]=\left[z/w:1\right]$; 当$w=0$，则$[z:0]=[1:0]$。于是我们有双射
+$$
+\mathbb{P}^{1}=\left\{ [z:1]\mid z\in\bbc\right\} \cup\left\{ [1:0]\right\} \stackrel{\mathrm{1-1}}{\longrightarrow}\bbc\cup\left\{ \infty\right\} =\hat{\bbc}.
+$$
+
+Mobius变换在$\mathbb{P}^{1}$上表现为线性变换：
+$$
+\left[\begin{array}{c}
+z\\
+w
+\end{array}\right]\mapsto\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]\left[\begin{array}{c}
+z\\
+w
+\end{array}\right]=\left[\begin{array}{c}
+az+bw\\
+cz+dw
+\end{array}\right].
+$$
+其对应到$\hat{\bbc}$上的Mobius变换
+$$
+z\mapsto\frac{az+b}{cz+d}.
+$$
+

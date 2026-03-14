@@ -1,0 +1,357 @@
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\begin_preamble
+
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "tgtermes" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_author "Yi Yao"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_options backref=true, isbn=false, url=false, doi=false, backend=biber
+\biblatex_bibstyle alphabetic
+\biblatex_citestyle alphabetic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification false
+\crossref_package refstyle
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\docbook_mathml_version 0
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bbc}{\mathbb{C}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\bbr}{\mathbb{R}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\bbq}{\mathbb{Q}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\bbz}{\mathbb{Z}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\bbn}{\mathbb{N}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\bbd}{\mathbb{D}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ii}{\mathrm{i}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+开圆盘 
+\begin_inset Formula $D\left(a,r\right)=\left\{ z\in\bbc\mid\left|z-a\right|<r\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+去心圆盘 
+\begin_inset Formula $D^{*}\left(a,r\right)=\left\{ z\in\bbc\mid0<\left|z-a\right|<r\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+单位圆盘 
+\begin_inset Formula $\bbd=D\left(0,1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+## 复球面 
+\end_layout
+
+\begin_layout Standard
+Mobius变换在一点处无定义，
+我们可以扩大复数域来补充定义。
+
+\end_layout
+
+\begin_layout Standard
+定义 
+\begin_inset Formula $\hat{\bbc}\coloneqq\bbc\cup\left\{ \infty\right\} $
+\end_inset
+
+，
+ 其中
+\begin_inset Formula $\infty$
+\end_inset
+
+是一个假想的无穷远点。
+
+\end_layout
+
+\begin_layout Standard
+Cayley 变换 
+\begin_inset Formula $\chi(z)=\frac{z-\ii}{z+\ii}$
+\end_inset
+
+ 可以补充定义
+\begin_inset Formula 
+\[
+\chi(-\ii)=\infty,\ \chi(\infty)=1
+\]
+
+\end_inset
+
+后成为 
+\begin_inset Formula $\hat{\bbc}$
+\end_inset
+
+ 到自身的双射。
+
+\end_layout
+
+\begin_layout Standard
+黎曼发现可以用二维球面
+\begin_inset Formula 
+\[
+S^{2}=\left\{ \left(x,y,z\right)\in\bbr^{3}\mid x^{2}+y^{2}+z^{2}=1\right\} 
+\]
+
+\end_inset
+
+作为
+\begin_inset Formula $\hat{\bbc}$
+\end_inset
+
+的几何模型。
+
+\end_layout
+
+\begin_layout Standard
+<展示课件：
+球极投影>
+\end_layout
+
+\begin_layout Standard
+还有一种几何模型：
+复射影直线
+\begin_inset Formula 
+\[
+\mathbb{P}^{1}=\left\{ \bbc^{2}\text{中过原点的直线}\right\} =\left(\bbc^{2}\backslash\left(0,0\right)\right)/\sim
+\]
+
+\end_inset
+
+其中等价关系
+\begin_inset Formula $\text{～}$
+\end_inset
+
+为向量相差一个数乘。
+用
+\begin_inset Formula $[z:w]$
+\end_inset
+
+表示向量
+\begin_inset Formula $\left(z,w\right)$
+\end_inset
+
+生成的直线，
+那么有
+\begin_inset Formula 
+\[
+[z:w]=[\lambda z:\lambda w],\ \forall\lambda\in\bbc^{*}.
+\]
+
+\end_inset
+
+若
+\begin_inset Formula $w\neq0$
+\end_inset
+
+，
+有
+\begin_inset Formula $[z:w]=\left[z/w:1\right]$
+\end_inset
+
+;
+ 当
+\begin_inset Formula $w=0$
+\end_inset
+
+，
+则
+\begin_inset Formula $[z:0]=[1:0]$
+\end_inset
+
+。
+于是我们有双射
+\begin_inset Formula 
+\[
+\mathbb{P}^{1}=\left\{ [z:1]\mid z\in\bbc\right\} \cup\left\{ [1:0]\right\} \stackrel{\mathrm{1-1}}{\longrightarrow}\bbc\cup\left\{ \infty\right\} =\hat{\bbc}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mobius变换在
+\begin_inset Formula $\mathbb{P}^{1}$
+\end_inset
+
+上表现为线性变换：
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+z\\
+w
+\end{array}\right]\mapsto\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]\left[\begin{array}{c}
+z\\
+w
+\end{array}\right]=\left[\begin{array}{c}
+az+bw\\
+cz+dw
+\end{array}\right].
+\]
+
+\end_inset
+
+其对应到
+\begin_inset Formula $\hat{\bbc}$
+\end_inset
+
+上的Mobius变换
+\begin_inset Formula 
+\[
+z\mapsto\frac{az+b}{cz+d}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

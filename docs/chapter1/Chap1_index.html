@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -166,10 +166,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#复数的定义" id="toc-复数的定义" class="nav-link active" data-scroll-target="#复数的定义"><span class="header-section-number">1.1</span> 复数的定义</a></li>
-  <li><a href="#复数的几何意义" id="toc-复数的几何意义" class="nav-link" data-scroll-target="#复数的几何意义"><span class="header-section-number">1.2</span> 复数的几何意义</a>
-  <ul class="collapse">
-  <li><a href="#复数乘法演示" id="toc-复数乘法演示" class="nav-link" data-scroll-target="#复数乘法演示"><span class="header-section-number">1.2.1</span> 复数乘法演示</a></li>
-  </ul></li>
+  <li><a href="#复球面" id="toc-复球面" class="nav-link" data-scroll-target="#复球面"><span class="header-section-number">1.2</span> 复球面</a></li>
   <li><a href="#习题" id="toc-习题" class="nav-link" data-scroll-target="#习题"><span class="header-section-number">1.3</span> 习题</a></li>
   </ul>
 </nav>
@@ -196,6 +193,15 @@ window.Quarto = {
 </header>
 
 
+<div class="hidden">
+<p>$$ \global%</p>
+<p>\global%</p>
+<p>\global%</p>
+<p>\global%</p>
+<p>\global%</p>
+<p>\global%</p>
+<p>\global% $$</p>
+</div>
 <p>这一章我们主要介绍复数的概念、复数域、复数的几何意义、复数的运算法则等。</p>
 <section id="复数的定义" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="复数的定义"><span class="header-section-number">1.1</span> 复数的定义</h2>
@@ -225,17 +231,51 @@ window.Quarto = {
 <div id="exr-complex-field-2" class="exr theorem exercise">
 <p><span class="theorem-title"><strong>练习 1.1</strong></span> 验证 <span class="math inline">\((2+3i)^{-1}=2-3i\)</span>。</p>
 </div>
-<p><span class="math display">\[\res{a}{f(z)}\]</span></p>
+<div class="hidden">
+<p>$$ \global%</p>
+<p>\global%</p>
+<p>\global%</p>
+<p>\global%</p>
+<p>\global%</p>
+<p>\global%</p>
+<p>\global% $$</p>
+</div>
 </section>
-<section id="复数的几何意义" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="复数的几何意义"><span class="header-section-number">1.2</span> 复数的几何意义</h2>
-<p>这里是几何意义的内容。</p>
-<p>回顾 <a href="#def-complex-field" class="quarto-xref">定义&nbsp;<span>1.1</span></a> 的定义。 <span class="citation" data-cites="ref">@ref</span>(def-complex-field)</p>
-<section id="复数乘法演示" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="复数乘法演示"><span class="header-section-number">1.2.1</span> 复数乘法演示</h3>
-<p>下方演示了两个复数 <span class="math inline">\(z_1\)</span> 和 <span class="math inline">\(z_2\)</span> 的乘积 <span class="math inline">\(z_3 = z_1 \cdot z_2\)</span>。你可以拖动蓝色点 (<span class="math inline">\(z_1\)</span>) 和红色点 (<span class="math inline">\(z_2\)</span>) 来观察乘积向量（绿色点 <span class="math inline">\(z_3\)</span>）的变化。</p>
-<p>请注意： 1. <span class="math inline">\(|z_3| = |z_1| \cdot |z_2|\)</span> 2. <span class="math inline">\(\arg(z_3) = \arg(z_1) + \arg(z_2)\)</span></p>
-</section>
+<section id="复球面" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="复球面"><span class="header-section-number">1.2</span> 复球面</h2>
+<p>Mobius变换在一点处无定义，我们可以扩大复数域来补充定义。</p>
+<p>定义 <span class="math inline">\(\hat{\mathbb{C}}\coloneqq\mathbb{C}\cup\left\{ \infty\right\}\)</span>， 其中<span class="math inline">\(\infty\)</span>是一个假想的无穷远点。</p>
+<p>Cayley 变换 <span class="math inline">\(\chi(z)=\frac{z-\mathrm{i}}{z+\mathrm{i}}\)</span> 可以补充定义 <span class="math display">\[
+\chi(-\mathrm{i})=\infty,\ \chi(\infty)=1
+\]</span> 后成为 <span class="math inline">\(\hat{\mathbb{C}}\)</span> 到自身的双射。</p>
+<p>黎曼发现可以用二维球面 <span class="math display">\[
+S^{2}=\left\{ \left(x,y,z\right)\in\mathbb{R}^{3}\mid x^{2}+y^{2}+z^{2}=1\right\}
+\]</span> 作为<span class="math inline">\(\hat{\mathbb{C}}\)</span>的几何模型。</p>
+<p>&lt;展示课件：球极投影&gt;</p>
+<p>还有一种几何模型：复射影直线 <span class="math display">\[
+\mathbb{P}^{1}=\left\{ \mathbb{C}^{2}\text{中过原点的直线}\right\} =\left(\mathbb{C}^{2}\backslash\left(0,0\right)\right)/\sim
+\]</span> 其中等价关系<span class="math inline">\(\text{～}\)</span>为向量相差一个数乘。用<span class="math inline">\([z:w]\)</span>表示向量<span class="math inline">\(\left(z,w\right)\)</span>生成的直线，那么有 <span class="math display">\[
+[z:w]=[\lambda z:\lambda w],\ \forall\lambda\in\mathbb{C}^{*}.
+\]</span> 若<span class="math inline">\(w\neq0\)</span>，有<span class="math inline">\([z:w]=\left[z/w:1\right]\)</span>; 当<span class="math inline">\(w=0\)</span>，则<span class="math inline">\([z:0]=[1:0]\)</span>。于是我们有双射 <span class="math display">\[
+\mathbb{P}^{1}=\left\{ [z:1]\mid z\in\mathbb{C}\right\} \cup\left\{ [1:0]\right\} \stackrel{\mathrm{1-1}}{\longrightarrow}\mathbb{C}\cup\left\{ \infty\right\} =\hat{\mathbb{C}}.
+\]</span></p>
+<p>Mobius变换在<span class="math inline">\(\mathbb{P}^{1}\)</span>上表现为线性变换： <span class="math display">\[
+\left[\begin{array}{c}
+z\\
+w
+\end{array}\right]\mapsto\left[\begin{array}{cc}
+a &amp; b\\
+c &amp; d
+\end{array}\right]\left[\begin{array}{c}
+z\\
+w
+\end{array}\right]=\left[\begin{array}{c}
+az+bw\\
+cz+dw
+\end{array}\right].
+\]</span> 其对应到<span class="math inline">\(\hat{\mathbb{C}}\)</span>上的Mobius变换 <span class="math display">\[
+z\mapsto\frac{az+b}{cz+d}.
+\]</span></p>
 </section>
 <section id="习题" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="习题"><span class="header-section-number">1.3</span> 习题</h2>

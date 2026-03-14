@@ -1,0 +1,17 @@
+::: {.hidden}
+$$
+\global\long\def\bbc{\mathbb{C}}%
+ 
+\global\long\def\bbr{\mathbb{R}}%
+ 
+\global\long\def\bbq{\mathbb{Q}}%
+ 
+\global\long\def\bbz{\mathbb{Z}}%
+ 
+\global\long\def\bbn{\mathbb{N}}%
+ 
+\global\long\def\bbd{\mathbb{D}}%
+
+\global\long\def\ii{\mathrm{i}}%
+$$
+:::

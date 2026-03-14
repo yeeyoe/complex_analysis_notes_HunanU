@@ -14,7 +14,7 @@
     "href": "chapter1/Chap1_index.html",
     "title": "1  复数",
     "section": "",
-    "text": "1.1 复数的定义\n这一章我们主要介绍复数的概念、复数域、复数的几何意义、复数的运算法则等。\n复数的引入是为了推广实数域到复域，以便于描述和研究一些在实数域上不存在的量，例如根为负数的二次方程的解。\n上述 定义 1.1 是标准的。\n\\[\\res{a}{f(z)}\\]",
+    "text": "1.1 复数的定义\n这一章我们主要介绍复数的概念、复数域、复数的几何意义、复数的运算法则等。\n复数的引入是为了推广实数域到复域，以便于描述和研究一些在实数域上不存在的量，例如根为负数的二次方程的解。\n上述 定义 1.1 是标准的。",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>复数</span>"
     ]
@@ -24,17 +24,17 @@
     "href": "chapter1/Chap1_index.html#复数的定义",
     "title": "1  复数",
     "section": "",
-    "text": "定义 1.1 （复数域）\n复数域 \\(\\mathbb{C}\\) 定义为有序实数对 \\((a,b)\\) 的集合，配备加法\n\\[(a,b)+(c,d)=(a+c,b+d) \\tag{1.1}\\] 与乘法\n\\[(a,b)\\cdot(c,d)=(ac-bd,ad+bc). \\tag{1.2}\\]\n\n\n\n定理 1.1 在运算(1.1)和(1.2)下，\\(\\mathbb{C}\\) 构成一个域，其零元为 \\((0,0)\\)，单位元为 \\((1,0)\\)，并满足交换律、结合律及分配律。\n\n\n证明. 回忆 域 的定义，验证上述运算满足所有域的性质。留作习题。\n\n\n推论 1.1 复数域 \\(\\mathbb{C}\\) 中非零元素均可逆。\n\n\n例 1.1 由(1.2),计算 \\((2+3i)(-1-4i)=(2-3i)(-1+4i)=-10+13i\\)。\n\n\n例 1.2 由 推论 1.1,计算复数的逆元 \\((2+3i)^{-1}=2-3i\\)。\n\n\n练习 1.1 验证 \\((2+3i)^{-1}=2-3i\\)。",
+    "text": "定义 1.1 （复数域）\n复数域 \\(\\mathbb{C}\\) 定义为有序实数对 \\((a,b)\\) 的集合，配备加法\n\\[(a,b)+(c,d)=(a+c,b+d) \\tag{1.1}\\] 与乘法\n\\[(a,b)\\cdot(c,d)=(ac-bd,ad+bc). \\tag{1.2}\\]\n\n\n\n定理 1.1 在运算(1.1)和(1.2)下，\\(\\mathbb{C}\\) 构成一个域，其零元为 \\((0,0)\\)，单位元为 \\((1,0)\\)，并满足交换律、结合律及分配律。\n\n\n证明. 回忆 域 的定义，验证上述运算满足所有域的性质。留作习题。\n\n\n推论 1.1 复数域 \\(\\mathbb{C}\\) 中非零元素均可逆。\n\n\n例 1.1 由(1.2),计算 \\((2+3i)(-1-4i)=(2-3i)(-1+4i)=-10+13i\\)。\n\n\n例 1.2 由 推论 1.1,计算复数的逆元 \\((2+3i)^{-1}=2-3i\\)。\n\n\n练习 1.1 验证 \\((2+3i)^{-1}=2-3i\\)。\n\n\n$$ \\global%\n\\global%\n\\global%\n\\global%\n\\global%\n\\global%\n\\global% $$",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>复数</span>"
     ]
   },
   {
-    "objectID": "chapter1/Chap1_index.html#复数的几何意义",
-    "href": "chapter1/Chap1_index.html#复数的几何意义",
+    "objectID": "chapter1/Chap1_index.html#复球面",
+    "href": "chapter1/Chap1_index.html#复球面",
     "title": "1  复数",
-    "section": "1.2 复数的几何意义",
-    "text": "1.2 复数的几何意义\n这里是几何意义的内容。\n回顾 定义 1.1 的定义。 @ref(def-complex-field)\n\n1.2.1 复数乘法演示\n下方演示了两个复数 \\(z_1\\) 和 \\(z_2\\) 的乘积 \\(z_3 = z_1 \\cdot z_2\\)。你可以拖动蓝色点 (\\(z_1\\)) 和红色点 (\\(z_2\\)) 来观察乘积向量（绿色点 \\(z_3\\)）的变化。\n请注意： 1. \\(|z_3| = |z_1| \\cdot |z_2|\\) 2. \\(\\arg(z_3) = \\arg(z_1) + \\arg(z_2)\\)",
+    "section": "1.2 复球面",
+    "text": "1.2 复球面\nMobius变换在一点处无定义，我们可以扩大复数域来补充定义。\n定义 \\(\\hat{\\mathbb{C}}\\coloneqq\\mathbb{C}\\cup\\left\\{ \\infty\\right\\}\\)， 其中\\(\\infty\\)是一个假想的无穷远点。\nCayley 变换 \\(\\chi(z)=\\frac{z-\\mathrm{i}}{z+\\mathrm{i}}\\) 可以补充定义 \\[\n\\chi(-\\mathrm{i})=\\infty,\\ \\chi(\\infty)=1\n\\] 后成为 \\(\\hat{\\mathbb{C}}\\) 到自身的双射。\n黎曼发现可以用二维球面 \\[\nS^{2}=\\left\\{ \\left(x,y,z\\right)\\in\\mathbb{R}^{3}\\mid x^{2}+y^{2}+z^{2}=1\\right\\}\n\\] 作为\\(\\hat{\\mathbb{C}}\\)的几何模型。\n&lt;展示课件：球极投影&gt;\n还有一种几何模型：复射影直线 \\[\n\\mathbb{P}^{1}=\\left\\{ \\mathbb{C}^{2}\\text{中过原点的直线}\\right\\} =\\left(\\mathbb{C}^{2}\\backslash\\left(0,0\\right)\\right)/\\sim\n\\] 其中等价关系\\(\\text{～}\\)为向量相差一个数乘。用\\([z:w]\\)表示向量\\(\\left(z,w\\right)\\)生成的直线，那么有 \\[\n[z:w]=[\\lambda z:\\lambda w],\\ \\forall\\lambda\\in\\mathbb{C}^{*}.\n\\] 若\\(w\\neq0\\)，有\\([z:w]=\\left[z/w:1\\right]\\); 当\\(w=0\\)，则\\([z:0]=[1:0]\\)。于是我们有双射 \\[\n\\mathbb{P}^{1}=\\left\\{ [z:1]\\mid z\\in\\mathbb{C}\\right\\} \\cup\\left\\{ [1:0]\\right\\} \\stackrel{\\mathrm{1-1}}{\\longrightarrow}\\mathbb{C}\\cup\\left\\{ \\infty\\right\\} =\\hat{\\mathbb{C}}.\n\\]\nMobius变换在\\(\\mathbb{P}^{1}\\)上表现为线性变换： \\[\n\\left[\\begin{array}{c}\nz\\\\\nw\n\\end{array}\\right]\\mapsto\\left[\\begin{array}{cc}\na & b\\\\\nc & d\n\\end{array}\\right]\\left[\\begin{array}{c}\nz\\\\\nw\n\\end{array}\\right]=\\left[\\begin{array}{c}\naz+bw\\\\\ncz+dw\n\\end{array}\\right].\n\\] 其对应到\\(\\hat{\\mathbb{C}}\\)上的Mobius变换 \\[\nz\\mapsto\\frac{az+b}{cz+d}.\n\\]",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>复数</span>"
     ]

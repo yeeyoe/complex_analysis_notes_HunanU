@@ -32,5 +32,3 @@ $$(a,b)\cdot(c,d)=(ac-bd,ad+bc).$$  {#eq-complex-mul}
 ::: {.exr #exr-complex-field-2}
 验证 $(2+3i)^{-1}=2-3i$。
 ::: 
-
-$$\res{a}{f(z)}$$
